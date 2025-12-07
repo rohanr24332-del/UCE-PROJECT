@@ -1,0 +1,36 @@
+{
+  "nodes": {
+    "[DUMMY] Split the task into 3-5 concise ordered steps:": {
+      "example": "[DUMMY] You are an expert assistant. Solve the step: Explain concisely: [DUMMY] Split the task into 3-5 concise ordered steps:.."
+    },
+    "Explain how airplanes fly in 4 steps.": {
+      "example": "[DUMMY] You are an expert assistant. Solve the step: Explain concisely: Explain how airplanes fly in 4 steps..."
+    }
+  },
+  "tasks": {
+    "Write a python function to check prime numbers and include simple tests.": {
+      "plan": [
+        "[DUMMY] Split the task into 3-5 concise ordered steps:"
+      ],
+      "results": [
+        [
+          "[DUMMY] Split the task into 3-5 concise ordered steps:",
+          "[DUMMY] You are an expert assistant. Solve the step: Explain concisely: [DUMMY] Split the task into 3-5 concise ordered steps:.."
+        ]
+      ],
+      "verified": true
+    },
+    "Explain how airplanes fly in 4 steps.": {
+      "plan": [
+        "Explain how airplanes fly in 4 steps."
+      ],
+      "results": [
+        [
+          "Explain how airplanes fly in 4 steps.",
+          "[DUMMY] You are an expert assistant. Solve the step: Explain concisely: Explain how airplanes fly in 4 steps..."
+        ]
+      ],
+      "verified": true
+    }
+  }
+}
