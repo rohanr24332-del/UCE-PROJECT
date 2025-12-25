@@ -19,19 +19,6 @@ It acts as a structured, self-correcting AI pipeline — far more organized than
 
 💻 Offline & Free – runs entirely on your laptop
 
-📁 Project Structure
-UCE/
- ├── agents/
- ├── planner/
- ├── reasoner/
- ├── verifier/
- ├── orchestrator/
- ├── memory/
- ├── tools/
- ├── main.py
- ├── requirements.txt
- └── models/config.py
-
 ⚙️ Installation
 python -m venv .venv
 .venv\Scripts\activate
