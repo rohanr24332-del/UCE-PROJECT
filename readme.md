@@ -1,41 +1,118 @@
-🚀 Unified Cognitive Engine (UCE)
+# Unified Cognitive Engine (UCE)
 
-UCE is a modular, AGI-inspired reasoning system that uses planning, multi-agent collaboration, verification, and long-term memory to solve complex tasks.
-It acts as a structured, self-correcting AI pipeline — far more organized than a normal chatbot.
+Unified Cognitive Engine (UCE) is an experimental modular AI framework for structured task execution. It combines planning, reasoning, verification, and persistent memory into a multi-stage pipeline designed to solve a wide range of tasks using local large language models.
 
-⭐ Key Features
+The project focuses on building a transparent and extensible cognitive architecture rather than a single conversational interface.
 
-🧠 Planning Engine – breaks tasks into clear steps
+## Features
 
-🤖 Multi-Agent System – Research, Reasoning, Coding & Critic agents
+- **Task Planning** – Decomposes user requests into structured execution steps.
+- **Multi-Agent Pipeline** – Coordinates specialized reasoning, research, coding, and critique agents.
+- **Iterative Verification** – Reviews generated outputs and performs corrective reasoning when required.
+- **Knowledge Memory** – Stores previous tasks and results for future retrieval and reuse.
+- **Tool Execution** – Supports controlled execution of Python-based tasks.
+- **Local LLM Integration** – Compatible with Ollama-hosted models such as DeepSeek, Llama, and Phi.
+- **Offline Execution** – Runs entirely on local hardware without requiring cloud APIs.
 
-✔️ Self-Verification Loop – detects mistakes and improves outputs
+## Architecture
 
-🧩 Knowledge Memory – stores summarized insights for reuse
+```
+User Request
+      │
+      ▼
+ Task Planner
+      │
+      ▼
+ Multi-Agent Execution
+ ├── Research
+ ├── Reasoning
+ ├── Coding
+ └── Critique
+      │
+      ▼
+ Verification & Self-Correction
+      │
+      ▼
+ Knowledge Memory
+      │
+      ▼
+ Final Response
+```
 
-🔧 Tool Execution – sandboxed Python code testing
+## Installation
 
-🦾 Local LLM Support – works with DeepSeek, Llama, Phi via Ollama
+Create a virtual environment and install the required dependencies:
 
-💻 Offline & Free – runs entirely on your laptop
-
-⚙️ Installation
+```bash
 python -m venv .venv
+```
+
+Activate the environment:
+
+**Windows**
+
+```bash
 .venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
+```
 
-Install local LLM (example: DeepSeek-R1 7B)
+Install a local language model with Ollama:
+
+```bash
 ollama pull deepseek-r1:7b
+```
 
+Update `models/config.py`:
 
-Update models/config.py:
-
+```python
 USE_OLLAMA = True
-OLLAMA_MODEL = "deepseek-r1:7b"
+DEFAULT_MODEL = "deepseek-r1:7b"
+```
 
-▶️ Run Demo
+## Running
+
+Interactive mode:
+
+```bash
+python main.py
+```
+
+Demo mode:
+
+```bash
 python main.py --demo
+```
 
-📌 About
+## Project Goals
 
-UCE is designed as a research-style AI system demonstrating structured cognition, multi-agent reasoning, and self-improvement workflows inspired by early AGI architectures.
+UCE explores several components commonly found in modern AI agent systems:
+
+- Structured task planning
+- Multi-agent coordination
+- Iterative reasoning
+- Output verification
+- Persistent knowledge storage
+- Local model execution
+
+The architecture is designed to be modular so that individual components can be extended or replaced independently.
+
+## Current Status
+
+The project currently includes:
+
+- Planning pipeline
+- Multi-agent execution
+- Verification and self-correction
+- Persistent knowledge memory
+- Local LLM integration through Ollama
+
+Future work includes richer memory retrieval, stronger constraint verification, improved tool usage, and more capable reasoning workflows.
+
+## License
+
+This project is intended for research, experimentation, and educational purposes.
